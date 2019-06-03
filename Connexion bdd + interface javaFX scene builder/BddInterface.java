@@ -1,5 +1,4 @@
-package bddinterface;   //connexion à la base de données MySQL avec interface javaFX scene builder
-
+package bddinterface;   // Connexion à la base de données MySQL avec l'interface JavaFX scene builder
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

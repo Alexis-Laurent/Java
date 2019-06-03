@@ -24,7 +24,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        //création des tables colonnes
+        // Création des tables colonnes
         TableColumn<Produit, String> col1 = new TableColumn<>("ID" );
         TableColumn<Produit, String> col2 = new TableColumn<>("Nom Produit" );
         TableColumn<Produit, String> col3 = new TableColumn<>("Prix" );
@@ -46,12 +46,12 @@ public class FXMLDocumentController implements Initializable {
         dataView.getColumns().add(col3);
 
         
-        try{ // Connexion à la base de données
+        try{ // Connexion bdd
             Class.forName("com.mysql.jdbc.Driver");
             Connection con=DriverManager.getConnection(
             "jdbc:mysql://localhost:3306/produit","root","");
             
-            // envoie une requête SQL à la base
+            // Envoie une requête SQL à la base
             Statement stmt=con.createStatement();
             ResultSet rs=stmt.executeQuery("select * from produit");            
             
